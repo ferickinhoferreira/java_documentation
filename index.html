@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Learn - Plataforma de Estudos</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Highlight.js for Java Code Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Import nosso arquivo local gerado -->
+    <script src="data.js"></script>
+
+    <style>
+        :root {
+            /* Alura Dark Theme Palette */
+            --bg-dark: #0f1523; /* Fundo principal bem escuro */
+            --bg-panel: #161e31; /* Fundo do menu lateral */
+            --bg-accent: #202b46; /* Headers do menu */
+            --primary: #2563eb; /* Azul forte Alura */
+            --primary-hover: #1d4ed8; 
+            --accent-green: #04d361; /* Verde clássico de destaque Alura/Rockeseat */
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #273452;
+            --java-orange: #e2e8f0; /* Trocando o laranja por um tom mais clean / tech */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            font-size: 16px;
+        }
+
+        /* Sidebar Alura Style */
+        .sidebar {
+            width: 340px;
+            background-color: var(--bg-panel);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            flex-shrink: 0;
+            box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .sidebar-header {
+            padding: 28px 24px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-panel);
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+
+        .sidebar-header h1 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ffffff;
+        }
+
+        .sidebar-header h1 span {
+            color: var(--accent-green);
+            font-size: 1.6rem;
+        }
+
+        .menu-wrapper {
+            padding: 15px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        /* Accordion Series */
+        .section-group {
+            margin: 6px 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            background: var(--bg-panel);
+            border: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        
+        .section-group:hover {
+            border-color: var(--border-color);
+        }
+
+        .section-header {
+            padding: 16px 18px;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #d1d5db;
+            transition: all 0.2s;
+            border-radius: 6px;
+        }
+
+        .section-header:hover {
+            background: var(--bg-accent);
+            color: #ffffff;
+        }
+
+        .section-header.active {
+            color: var(--accent-green);
+        }
+
+        .section-header.active .arrow {
+            transform: rotate(90deg);
+            color: var(--accent-green);
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .chapter-list {
+            display: none;
+            flex-direction: column;
+            padding-bottom: 10px;
+        }
+
+        .chapter-list.open {
+            display: flex;
+        }
+
+        .chapter-item {
+            padding: 12px 16px 12px 36px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            transition: all 0.2s;
+            line-height: 1.5;
+            position: relative;
+        }
+        
+        /* Bullets customizados estilo Alura */
+        .chapter-item::before {
+            content: '>';
+            position: absolute;
+            left: 18px;
+            font-size: 0.8rem;
+            color: var(--border-color);
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .chapter-item:hover {
+            color: #ffffff;
+            background-color: rgba(255,255,255,0.02);
+        }
+        
+        .chapter-item:hover::before {
+            color: var(--text-muted);
+            transform: translateX(3px);
+        }
+
+        .chapter-item.active {
+            color: #ffffff;
+            font-weight: 600;
+            background-color: rgba(4, 211, 97, 0.05); /* Fundo verde super suave */
+            border-right: 3px solid var(--accent-green);
+        }
+        
+        .chapter-item.active::before {
+            color: var(--accent-green);
+            transform: translateX(3px);
+            content: '●'; /* Bolinha quando ativo */
+            font-size: 0.6rem;
+            top: 15px;
+        }
+
+        /* Main Content Area */
+        .content-area {
+            flex-grow: 1;
+            overflow-y: auto;
+            background-color: var(--bg-dark);
+            scroll-behavior: smooth;
+        }
+
+        .content-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 80px 50px;
+        }
+
+        /* Markdown Styles Premium */
+        .markdown-body {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #cbd5e1;
+        }
+
+        .markdown-body h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 40px;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .markdown-body h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #f3f4f6;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5em;
+        }
+
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1.5em;
+            padding-left: 1.5em;
+        }
+
+        .markdown-body li {
+            margin-bottom: 0.6em;
+        }
+
+        .markdown-body strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .markdown-body em {
+            color: var(--accent-green);
+            font-style: italic;
+        }
+
+        .markdown-body a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .markdown-body a:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+
+        /* Code Blocks Alura Style */
+        .markdown-body pre {
+            background-color: #0d1117; /* Bem escuro para destacar sintaxe */
+            border-radius: 8px;
+            padding: 24px;
+            overflow-x: auto;
+            margin: 2em 0;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .markdown-body code {
+            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: 0.9em;
+            letter-spacing: -0.3px;
+        }
+
+        .markdown-body p code, .markdown-body li code {
+            background-color: rgba(255,255,255,0.08);
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+            color: #a78bfa; /* Tom roxinho para destacar variáveis inline */
+            font-weight: 500;
+        }
+
+        .markdown-body blockquote {
+            border-left: 4px solid var(--accent-green);
+            color: #9ca3af;
+            margin: 2em 0;
+            background: rgba(4, 211, 97, 0.05);
+            padding: 20px 25px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn.outline {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            box-shadow: none;
+        }
+
+        .btn.outline:hover {
+            background-color: var(--bg-panel);
+            border-color: #4b5563;
+        }
+
+        /* Empty State */
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            text-align: center;
+            color: var(--text-muted);
+        }
+        
+        .empty-state h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1><span>☕</span> Java Learn</h1>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 5px;">Plataforma de Estudos ADS</p>
+        </div>
+        <div class="menu-wrapper" id="menu-container">
+            <!-- As seções serão geradas dinamicamente aqui -->
+        </div>
+    </div>
+
+    <div class="content-area" id="content-container">
+        <div class="content-container">
+            <div id="markdown-viewer" class="markdown-body">
+                <div class="empty-state">
+                    <div class="glass-panel">
+                        <h2>Bem-vindo(a) ao seu Curso de Java!</h2>
+                        <p style="margin-bottom: 20px;">Eu, Antigravity, construí este ambiente para você ler as documentações de maneira estruturada, bonita e sem distrações.</p>
+                        <p>Escolha um capítulo no menu lateral esquerdo para começar os seus estudos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Formatar nomes das pastas para títulos
+        const folderTitles = {
+            "1-fundamentos-do-java": "1. Fundamentos do Java",
+            "2-logica-de-programacao": "2. Lógica de Programação",
+            "3-dados-e-funcoes": "3. Dados e Funções",
+            "4-java-avancado": "4. Java Avançado"
+        };
+
+        const menuContainer = document.getElementById('menu-container');
+        const markdownViewer = document.getElementById('markdown-viewer');
+        
+        // Mapear todos os itens para facilitar navegação Prev/Next
+        let flatChapters = [];
+        let currentChapterIndex = -1;
+
+        // Configurar Highlight.js no marked
+        marked.setOptions({
+            highlight: function(code, lang) {
+                const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+                return hljs.highlight(code, { language }).value;
+            },
+            langPrefix: 'hljs language-'
+        });
+
+        function renderMenu() {
+            if (typeof courseData === 'undefined') {
+                menuContainer.innerHTML = `<div style="padding: 20px; color: #ef4444; text-align: center;">Erro: documentação não encontrada.</div>`;
+                return;
+            }
+
+            let indexSeq = 0;
+
+            Object.keys(courseData).forEach((folderName) => {
+                const sectionGroup = document.createElement('div');
+                sectionGroup.className = 'section-group';
+                
+                const sectionHeader = document.createElement('div');
+                sectionHeader.className = 'section-header';
+                
+                // Mudei para deixar a aba 1 aberta por padrão
+                const isFirstSection = folderName === "1-fundamentos-do-java";
+                if(isFirstSection) sectionHeader.classList.add('active');
+
+                sectionHeader.innerHTML = `
+                    <span>${folderTitles[folderName] || folderName}</span>
+                    <span class="arrow">▶</span>
+                `;
+                
+                const chapterList = document.createElement('div');
+                chapterList.className = 'chapter-list';
+                if(isFirstSection) chapterList.classList.add('open');
+
+                sectionHeader.addEventListener('click', () => {
+                    sectionHeader.classList.toggle('active');
+                    chapterList.classList.toggle('open');
+                });
+
+                courseData[folderName].forEach(fileData => {
+                    const chapterItem = document.createElement('div');
+                    chapterItem.className = 'chapter-item';
+                    
+                    // Regex para pegar o título limpo do arquivo: ex "01-o-que-e-java.md" -> "O que é Java"
+                    let displayTitle = fileData.filename.replace('.md', '');
+                    displayTitle = displayTitle.replace(/^\d+-/, ''); // Remove number
+                    displayTitle = displayTitle.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
+                    // Melhor exibir o nome completo que pegamos do conteúdo se houver `# Titulo`, senão usamos fileData.filename limpo
+                    const h1Match = fileData.content.match(/^# (.*)/m);
+                    if (h1Match) displayTitle = h1Match[1];
+
+                    chapterItem.innerText = displayTitle;
+                    
+                    const chapterRef = {
+                        index: indexSeq,
+                        folder: folderName,
+                        file: fileData.filename,
+                        title: displayTitle,
+                        content: fileData.content,
+                        element: chapterItem
+                    };
+                    flatChapters.push(chapterRef);
+
+                    chapterItem.addEventListener('click', () => {
+                        openChapter(chapterRef.index);
+                    });
+
+                    chapterList.appendChild(chapterItem);
+                    indexSeq++;
+                });
+
+                sectionGroup.appendChild(sectionHeader);
+                sectionGroup.appendChild(chapterList);
+                menuContainer.appendChild(sectionGroup);
+            });
+        }
+
+        function openChapter(index) {
+            if (index < 0 || index >= flatChapters.length) return;
+            
+            // Remove active classe de todos
+            flatChapters.forEach(ch => ch.element.classList.remove('active'));
+            
+            currentChapterIndex = index;
+            const chapter = flatChapters[index];
+            chapter.element.classList.add('active');
+
+            // Setar conteudo
+            const htmlContent = marked.parse(chapter.content);
+            
+            // Botões de navegação
+            let navHtml = `<div class="nav-buttons">`;
+            if (index > 0) {
+                navHtml += `<button class="btn outline" onclick="openChapter(${index - 1})">← Anterior</button>`;
+            } else {
+                navHtml += `<div></div>`;
+            }
+            
+            if (index < flatChapters.length - 1) {
+                navHtml += `<button class="btn" onclick="openChapter(${index + 1})">Próximo →</button>`;
+            } else {
+                navHtml += `<div></div>`;
+            }
+            navHtml += `</div>`;
+
+            markdownViewer.innerHTML = htmlContent + navHtml;
+            
+            // Rolar para o topo
+            document.getElementById('content-container').scrollTop = 0;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMenu();
+        });
+
+    </script>
+</body>
+</html>

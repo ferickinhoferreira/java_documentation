@@ -1,7 +1,7 @@
-$baseDir = "c:\Users\08128175408\Documents\java learn"
+$baseDir = "x:\feric\Documents\Meus Programas que Criei\java documentation"
 $out = "const courseData = {`n"
 
-$folders = Get-ChildItem -Path $baseDir -Directory | Where-Object { $_.Name -match '^\d-' } | Sort-Object Name
+$folders = Get-ChildItem -Path $baseDir -Directory | Where-Object { $_.Name -match '^\d' } | Sort-Object Name
 
 foreach ($folder in $folders) {
     $out += "  `"$($folder.Name)`": [`n"

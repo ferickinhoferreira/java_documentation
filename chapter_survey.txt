@@ -1,0 +1,288 @@
+Key: 0.1-a-magia-do-codigo
+  [0] 01-a-arte-das-cores.md
+      Start: # 🌈 A Arte das Cores: Por que códigos são colorid
+      End:   texto" automático**.\n\n---\n\n## Minhas Anotações\n- \n
+Key: 0.5-mergulho-profundo-nos-fundamentos
+  [0] 01-mergulho-nas-variaveis.md
+      Start: # 📦 Mergulho Profundo: int, double, boolean e Str
+      End:   `double`. Se não → `int`.\n\n## Minhas Anotações\n- \n
+  [1] 02-mergulho-nos-operadores.md
+      Start: # ⚡ Mergulho Profundo: Operadores (Os Verbos do Ja
+      End:   o | `++ -- += -= *= /=` |\n\n## Minhas Anotações\n- \n
+  [2] 03-mergulho-nas-decisoes.md
+      Start: # 🚦 Mergulho Profundo: Decisões (if-else e switch
+      End:   nome.equals("Ferick"))` |\n\n## Minhas Anotações\n- \n
+  [3] 04-mergulho-nas-repeticoes.md
+      Start: # 🔄 Mergulho Profundo: Repetições (while e for)\n\n
+      End:    da programação! 🔄🖥️⚡💪\n\n## Minhas Anotações\n- \n
+Key: 0-comece-por-aqui-o-be-a-ba
+  [0] 01-o-que-e-ser-programador.md
+      Start: # 🧑‍💻 Capítulo 1: O Que é Ser um Programador?\n\n>
+      End:   de mais importante: PENSAMENTO LÓGICO"]\n  }\n}\n-->\n
+  [1] 02-caixinhas-do-programa.md
+      Start: # 📦 Capítulo 2: Variáveis — As Caixinhas do Seu P
+      End:   atenar texto com variáveis no println"]\n  }\n}\n-->\n
+  [2] 03-gritando-para-o-mundo.md
+      Start: # 📢 Capítulo 3: Gritando para o Mundo (`System.ou
+      End:   variável: double total = preco * qtd;"]\n  }\n}\n-->\n
+  [3] 04-escutando-voce.md
+      Start: # 🎤 Capítulo 4: Escutando Você (`Scanner`)\n\n> **N
+      End:   os dias.** Continue! ☕🚀✨\n\n## Minhas Anotações\n- \n
+  [4] 05-tomando-decisoes.md
+      Start: # 🚦 Capítulo 5: Tomando Decisões (`if` e `else`)\n
+      End:    'Empréstimo Aprovado' ou 'Reprovado'"]\n  }\n}\n-->\n
+  [5] 06-repeticoes.md
+      Start: # 🔄 Capítulo 6: Repetições (`while` e `for`)\n\n> *
+      End:   !** Não desista! ☕🚀✨💪🏆\n\n## Minhas Anotações\n- \n
+Key: 1-fundamentos-do-java
+  [0] 01-o-que-e-java.md
+      Start: # Capítulo 1: O Que é Java?\n\n> **Antes de começar 
+      End:   ada e disciplinada.\n\n---\n\n### Minhas Anotações\n- \n
+  [1] 02-onde-o-java-e-usado.md
+      Start: # Capítulo 2: Onde o Java é usado (Aplicações reai
+      End:   outra coisa muito rápido!\n\n## Minhas Anotações\n- \n
+  [2] 03-instalando-o-ambiente.md
+      Start: # Capítulo 3: Instalando o Ambiente (Configurando 
+      End:    seu primeiro programa!**\n\n## Minhas Anotações\n- \n
+  [3] 04-primeiro-programa-ola-mundo.md
+      Start: # Capítulo 4: Primeiro Programa: Olá, Mundo!\n\n> **
+      End:   usão em naturalidade. ☕🚀\n\n## Minhas Anotações\n- \n
+  [4] 05-estrutura-de-um-programa-java.md
+      Start: # Capítulo 5: Estrutura de um Programa Java (Class
+      End:   tural quanto respirar. 💪\n\n## Minhas Anotações\n- \n
+  [5] 06-jvm-jre-e-jdk.md
+      Start: # Capítulo 6: JVM, JRE e JDK (Como o Java é execut
+      End:   tela do Windows ou Linux!\n\n## Minhas Anotações\n- \n
+  [6] 07-comentarios-e-boas-praticas.md
+      Start: # Capítulo 7: Comentários e Boas Práticas (Código 
+      End:   \nint anoAtual = 2024;\n```\n\n## Minhas Anotações\n- \n
+  [7] 08-tipos-de-dados-basicos.md
+      Start: # 📦 Capítulo 08: Variáveis, Tipos de Dados, Opera
+      End:   nos Microserviços! ☕🚀💎🏆\n\n## Minhas Anotações\n- 
+  [8] 09-variaveis-e-constantes.md
+      Start: # Capítulo 9: Variáveis e Constantes (Armazenando 
+      End:   TAXA_DE_JUROS = 0.05;\n```\n\n## Minhas Anotações\n- \n
+  [9] 10-entrada-e-saida-de-dados.md
+      Start: # Capítulo 10: Entrada e Saída de Dados (Interagin
+      End:   2: Lógica de Programação!\n\n## Minhas Anotações\n- \n
+  [10] 11-precedencia-operadores-casting.md
+      Start: # Capítulo 11: Precedência de Operadores e Casting
+      End:   rna a divisão decimal\n```\n\n## Minhas Anotações\n- \n
+  [11] 12-strings-basicas-antes-da-parte-3.md
+      Start: # Capítulo 12: Strings Básicas (Antes da Parte 3)\n
+      End:    as condições"]\n  }\n}\n-->\n\n## Minhas Anotações\n- \n
+Key: 2-logica-de-programacao
+  [0] 01-operadores-aritmeticos.md
+      Start: # Capítulo 1: Operadores Aritméticos\n\n## A Matemát
+      End:   a o saldo atual por 2\n```\n\n## Minhas Anotações\n- \n
+  [1] 02-operadores-logicos.md
+      Start: # Capítulo 2: Operadores Lógicos e Relacionais\n\n##
+      End:   do a estrutura `if/else`!\n\n## Minhas Anotações\n- \n
+  [2] 03-estruturas-de-decisao-if-e-else.md
+      Start: # Capítulo 3: Estruturas de Decisão: if e else\n\n##
+      End:   ro aqui irrevogavelmente.\n\n## Minhas Anotações\n- \n
+  [3] 04-if-else-if-e-else.md
+      Start: # Capítulo 4: if, else if e else (Testando múltipl
+      End:   ó quer que nada aconteça.\n\n## Minhas Anotações\n- \n
+  [4] 05-switch-case.md
+      Start: # Capítulo 5: Switch Case (Decisões com opções fix
+      End:    `"Você quer P, M ou G?"`\n\n## Minhas Anotações\n- \n
+  [5] 06-loop-for.md
+      Start: # Capítulo 6: Loop: for (Repetições com contador)\n
+      End:   + " = " + (7 * x));\n}\n```\n\n## Minhas Anotações\n- \n
+  [6] 07-loop-while.md
+      Start: # Capítulo 7: Loop: while (Repetições por condição
+      End:    chaves do comando While!\n\n## Minhas Anotações\n- \n
+  [7] 08-loop-do-while.md
+      Start: # Capítulo 8: Loop: do while (Executa pelo menos u
+      End:   a vida de qualquer jeito.\n\n## Minhas Anotações\n- \n
+  [8] 09-break-e-continue.md
+      Start: # Capítulo 9: break e continue (Controlando o flux
+      End:   inheiros da empresa! 🤑).\n\n## Minhas Anotações\n- \n
+  [9] 10-exercicios-praticos-parte-1.md
+      Start: # Capítulo 10: Exercícios Práticos - Parte 1\n\n## H
+      End:   nções da **PARTE 3!** 🏆.\n\n## Minhas Anotações\n- \n
+  [10] 11-operador-ternario-e-condicionais-avancadas.md
+      Start: # Capítulo 11: Operador Ternário e Condicionais Av
+      End:   ração" : "Reprovado";\n```\n\n## Minhas Anotações\n- \n
+  [11] 12-lacos-aninhados-e-mais-exercicios.md
+      Start: # Capítulo 12: Laços Aninhados e Mais Exercícios P
+      End:   (1 / 12 / 123 / 1234...).\n\n## Minhas Anotações\n- \n
+Key: 3-poo-e-estruturas-de-dados
+  [0] 01-funcoes-e-metodos.md
+      Start: # Capítulo 4: Funções e Métodos (Criando funções e
+      End:   m resultados matemáticos!\n\n## Minhas Anotações\n- \n
+  [1] 02-passagem-de-parametros.md
+      Start: # Capítulo 5: Passagem de Parâmetros e Retorno\n\n##
+      End:   ro do compilador na hora.\n\n## Minhas Anotações\n- \n
+  [2] 03-escopo-de-variaveis.md
+      Start: # Capítulo 6: Escopo de Variáveis (Variáveis locai
+      End:   o estiver fora do escopo.\n\n## Minhas Anotações\n- \n
+  [3] 04-classes-e-objetos.md
+      Start: # Classes e Objetos\n\n## O que é Orientação a Objet
+      End:   eiro e mais importante passo para dominar o Java.\n
+  [4] 05-atributos-e-metodos.md
+      Start: # Atributos e Métodos\n\n## O estado e comportamento
+      End:   ente a partir do marco zero com **Construtores**.\n
+  [5] 06-construtores-e-palavra-this.md
+      Start: # Construtores e Palavra this\n\n## O que é um Const
+      End:   enhum dado obrigatório ou importante em "branco".\n
+  [6] 07-encapsulamento-getters-setters.md
+      Start: # Encapsulamento, Getters e Setters\n\n## O Pilar de
+      End:   métodos de transação (`depositar()` e `sacar()`).\n
+  [7] 08-heranca-extends.md
+      Start: # Herança (extends e super)\n\n## O que é Herança?\nA
+      End:   e Motor como um atributo dentro da classe Carro).\n
+  [8] 09-polimorfismo-sobrecarga-sobreposicao.md
+      Start: # Polimorfismo: Sobrecarga e Sobreposição\n\n## A Ar
+      End:   motor central de "sons" do jogo continua o mesmo!\n
+  [9] 10-classes-abstratas-e-interfaces.md
+      Start: # Classes Abstratas e Interfaces\n\n## Introdução\n\nÀ
+      End:   : "Gerente sabe logar", "Fornecedor sabe logar").\n
+  [10] 11-modificadores-de-acesso.md
+      Start: # Modificadores de Acesso e Escopo\n\nNo decorrer do
+      End:   ra em torno da blindagem dos modelos de software.\n
+  [11] 12-palavras-static-e-final.md
+      Start: # Palavras static e final\n\nAté aqui cobrimos como 
+      End:   c final" origina as famosas _Constantes Globais_.\n
+  [12] 13-arrays-vetores.md
+      Start: # Capítulo 1: Arrays - Vetores (Armazenando múltip
+      End:   ons (Listas)* na Parte 4!\n\n## Minhas Anotações\n- \n
+  [13] 14-matrizes.md
+      Start: # Capítulo 2: Matrizes (Trabalhando com matrizes)\n
+      End:   omo o Java viaja no mapa.\n\n## Minhas Anotações\n- \n
+  [14] 15-strings-e-metodos-avancados.md
+      Start: # Capítulo 3: Strings e Métodos Úteis\n\n## Strings 
+      End:   olher o método milagroso!\n\n## Minhas Anotações\n- \n
+  [15] 16-recursividade.md
+      Start: # Capítulo 7: Recursividade (Funções que se chamam
+      End:   judas de devs do mundo!).\n\n## Minhas Anotações\n- \n
+  [16] 17-exercicios-praticos-poo.md
+      Start: # Exercícios Práticos - POO\n\nChegou a hora de fixa
+      End:   los do mundo real no papel antes de virar código.\n
+Key: 4-java-avancado
+  [0] 01-tratamento-de-erros.md
+      Start: # Capítulo 1: Tratamento de Erros (Try, catch e fi
+      End:   só não tinha como prever.\n\n## Minhas Anotações\n- \n
+  [1] 02-colecoes-em-java.md
+      Start: # Capítulo 2: Coleções em Java (ArrayList, HashMap
+      End:   xaustivamente na sua IDE!\n\n## Minhas Anotações\n- \n
+  [2] 03-lacos-aprimorados-for-each.md
+      Start: # Capítulo 3: Laços Aprimorados - for-each\n\n## Uma
+      End:    nos seus códigos limpos!\n\n## Minhas Anotações\n- \n
+  [3] 04-enums-e-constantes.md
+      Start: # Capítulo 6: Enums e Constantes (Constantes tipad
+      End:   tações de banco de array.\n\n## Minhas Anotações\n- \n
+  [4] 05-entendendo-a-classe-math.md
+      Start: # Capítulo 9: Entendendo a classe Math\n\n## A Calcu
+      End:   danos Críticos na cabeça!\n\n## Minhas Anotações\n- \n
+  [5] 06-classes-anonimas-e-lambdas.md
+      Start: # Capítulo 7: Classes Anônimas e Lambdas\n\n## A Evo
+      End:   Capítulo mestre seguinte!\n\n## Minhas Anotações\n- \n
+  [6] 07-stream-api.md
+      Start: # Capítulo 8: Stream API (Filtrando e mapeando lis
+      End:   derá a linha algorítmica!\n\n## Minhas Anotações\n- \n
+  [7] 08-introducao-a-depuracao.md
+      Start: # Capítulo 8: Introdução à Depuração (Encontrando 
+      End:   icas (Fase 4 Avançada)!**\n\n## Minhas Anotações\n- \n
+  [8] 09-datas-e-horas.md
+      Start: # Capítulo 5: Datas e Horas (LocalDate e LocalDate
+      End:    e as inversas `.minus()`\n\n## Minhas Anotações\n- \n
+  [9] 10-manipulacao-de-arquivos.md
+      Start: # Capítulo 4: Manipulação de Arquivos (Lendo e esc
+      End:   Windows antes das provas!\n\n## Minhas Anotações\n- \n
+  [10] 11-exercicios-praticos-parte-2.md
+      Start: # Capítulo 10: Exercícios Práticos - Parte 2\n\n## A
+      End:   rfismos, Static e Beans)!\n\n## Minhas Anotações\n- \n
+Key: 5-mastery-e-projetos
+  [0] 01-threads-e-concorrencia.md
+      Start: # Threads e Programação Paralela\n\n## O que são Thr
+      End:   are lento de um sistema de alta performance. 🚀🧵\n
+  [1] 02-design-patterns.md
+      Start: # Capítulo 2: Design Patterns (Padrões de Projeto)
+      End:    cobrados em entrevistas.\n\n## Minhas Anotações\n- \n
+  [2] 03-jdbc-e-persistencia.md
+      Start: # Capítulo 3: JDBC e Persistência de Dados\n\n> **Ne
+      End:   ne bem OOP e Collections.\n\n## Minhas Anotações\n- \n
+  [3] 04-projeto-final-completo.md
+      Start: # Capítulo 4: Projeto Final — Sistema Completo\n\n> 
+      End:   das as seções anteriores!\n\n## Minhas Anotações\n- \n
+Key: 6-dominando-o-ecossistema-java
+  [0] 01-generics-tipos-genericos.md
+      Start: # Generics (Tipos Genéricos)\n\n## O que são Generic
+      End:   los diferencia um programador júnior de um pleno.\n
+  [1] 02-optional-evitando-nullpointer.md
+      Start: # Optional: Evitando o NullPointerException\n\n## O 
+      End:   balhar com **Streams API** e frameworks modernos.\n
+  [2] 03-maven-e-gradle-gerenciamento.md
+      Start: # Maven e Gradle: Gestão de Projetos\n\nPara ser um 
+      End:   e usar bibliotecas famosas como Lombok ou Spring.\n
+  [3] 04-lombok-codigo-limpo.md
+      Start: # Lombok: Adeus ao Código Repetitivo\n\n## O Problem
+      End:   deixa o foco no que importa: a lógica de negócio.\n
+  [4] 05-json-com-jackson.md
+      Start: # JSON com Jackson: Comunicação entre Sistemas\n\nNo
+      End:   uda muito na hora de debugar erros de integração.\n
+  [5] 06-junit-testes-unitarios.md
+      Start: # JUnit: A Segurança dos Testes Unitários\n\nUm prog
+      End:   andes empresas, JUnit é um requisito obrigatório.\n
+  [6] 07-boas-praticas-solid.md
+      Start: # Boas Práticas e SOLID\n\nEscrever código que o com
+      End:   meses porque o código virou um canavial de erros.\n
+  [7] 08-padroes-de-projeto-design-patterns.md
+      Start: # Design Patterns: Padrões de Projeto\n\nDesign Patt
+      End:   izar, pesquise: "Qual design pattern resolve X?".\n
+  [8] 09-logica-de-logs-slf4j.md
+      Start: # Logs com SLF4J e Logback\n\nNunca use `System.out.
+      End:   da a logar bem e você economizará noites de sono.\n
+  [9] 10-preparacao-para-mercado.md
+      Start: # Preparação para o Mercado e Próximos Passos\n\nPar
+      End:    pessoas.\n\n**Boa sorte na sua jornada, Dev!** ☕🚀\n
+Key: 7-web-e-microsservicos-spring
+  [0] 01-introducao-ao-spring-boot.md
+      Start: # Introdução ao Spring Boot\n\nO **Spring Boot** é a
+      End:   se todas as vagas de backend hoje pedem isso. ☕🔥\n
+  [1] 02-criando-apis-rest.md
+      Start: # Criando APIs REST (GET, POST, PUT, DELETE)\n\nUma 
+      End:   , Angular, Mobile ou qualquer outro sistema. 📱🌐\n
+  [2] 03-conectando-banco-jpa.md
+      Start: # Conectando com Banco de Dados (Spring Data JPA)\n
+      End:    É produtivo, seguro e extremamente poderoso. 💾⚡\n
+  [3] 04-seguranca-jwt.md
+      Start: # Segurança com Spring Security e JWT\n\nAbrir um si
+      End:   stemas para bancos, lojas ou redes sociais. 🔐🛡️\n
+  [4] 05-microservicos-escala.md
+      Start: # Microserviços: Escalando o Sistema\n\nQuando uma e
+      End:   rgos de **Sênior e Arquiteto de Software**. 🏗️📡\n
+  [5] 06-jdbc-acesso-raiz-banco.md
+      Start: # JDBC: O Acesso Raiz a Bancos de Dados\n\nAntes de 
+      End:    dá o controle total sobre o banco de dados. 💾🔨\n
+Key: 8-infraestrutura-e-deploy
+  [0] 01-git-e-controle-de-versao.md
+      Start: # Git e Controle de Versão (Essencial)\n\nO **Git** 
+      End:   em nenhuma empresa de tecnologia do mundo. 🕒💾🚀\n
+  [1] 02-mockito-simulando-dependencias.md
+      Start: # Mockito: Simulando Dependências\n\nNos **Testes Un
+      End:    que seu backend Java seja indestrutível. 🧪🛡️🚀\n
+  [2] 03-docker-java-containers.md
+      Start: # Docker: Seu Java em Qualquer Lugar (Sem Instalar
+      End:   frente de quem só sabe "escrever código". 🏗️📦🚢\n
+  [3] 04-arquitetura-mvc-camadas.md
+      Start: # Arquitetura: MVC, Camadas e Hexagonal\n\nAté agora
+      End:    gigantes que duram décadas sem quebrar. 🏗️📐🏛️\n
+  [4] 05-deploy-nuvem-cloud.md
+      Start: # Deploy: Seu App Java Online (Cloud)\n\nDepois de e
+      End:   stá online, ele não existe para o mundo! ☁️🌍🚀🏆\n
+Key: 9-hacks-e-dicas-de-carreira
+  [0] 01-mentalidade-de-crescimento.md
+      Start: # Mentalidade de Crescimento (O Hack Mental)\n\nO ma
+      End:    você está em **processo de carregamento**. 🧠⚡🚀\n
+  [1] 02-como-estudar-sem-se-perder.md
+      Start: # Como Estudar Java Sem se Perder\n\nO Java é gigant
+      End:   por dia vale mais que 10 horas num domingo. ☕📚🚀\n
+  [2] 03-hacks-de-ouro-do-java.md
+      Start: # Hacks de Ouro do Java (Segredos do Código)\n\nAqui
+      End:   e fogo" na hora de criar códigos complexos. ☕🔥⌨️\n
+  [3] 04-exercicios-de-ouro-beaba.md
+      Start: # Exercícios de Ouro (Be-a-Bá ao Mestre)\n\nTente re
+      End:   , vai se sentir um **Criador de Soluções**. ☕🚀🏆\n
